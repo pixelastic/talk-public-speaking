@@ -1,0 +1,59 @@
+
+// Easy spotting of some information in code blocks
+.code--key {
+  color: $red;
+}
+.code--value {
+  color: $green;
+}
+.code--file {
+  color: $purple;
+}
+.code--directory {
+  color: $green;
+}
+
+// Oroshi colorscheme
+.token {
+  &.property {
+    color: $red;
+  }
+  &.punctuation {
+    color: #D0D0D0;
+  }
+  &.function {
+    color: $dark-green;
+  }
+  &.variable {
+    color: $green;
+  }
+  &.keyword {
+     color: $red;
+  }
+  &.constant {
+     color: $yellow;
+  }
+  &.string {
+    color: $blue;
+  }
+  &.number {
+    color: $blue;
+    font-weight: bold;
+  }
+  &.comment {
+    color: #626262;
+  }
+}
+
+.language-html .token {
+  &.tag,
+  &.punctuation {
+    color: $dark-green;
+  }
+  &.attr-name {
+     color: $red;
+  }
+  &.attr-value {
+    color: $blue;
+  }
+}

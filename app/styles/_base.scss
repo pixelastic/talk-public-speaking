@@ -1,0 +1,25 @@
+*, :after, :before {
+  box-sizing: border-box;
+}
+// Change base font-size so all tachyon scale adapt
+html {
+  font-size: 48px;
+}
+body {
+  background-color: $background; // Change it in _variables.scss
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+// Default reveal values override
+.reveal {
+  .slides {
+    text-align: left;
+  }
+  pre {
+    width: initial;
+    margin: 0;
+    code {
+      padding: 0;
+    }
+  }
+}

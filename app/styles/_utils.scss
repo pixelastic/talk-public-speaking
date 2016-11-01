@@ -1,0 +1,47 @@
+// Fonts
+.palooka { font-family: 'Palooka'; }
+.palooka.small-caps { letter-spacing: .05rem;}
+.crime { font-family: 'Crime'; }
+.hack { font-family: 'Hack'; }
+// Flexbox
+.flex-nogrow { flex-grow: 0; }
+.flex-grow { flex-grow: 1; }
+.flex-noshrink { flex-shrink: 0; }
+.flex-shrink { flex-shrink: 1; }
+.flex-row-wrap { display: flex; flex-direction: row; flex-wrap: wrap; }
+.flex-row-nowrap { display: flex; flex-direction: row; }
+.flex-column-wrap { display: flex; flex-direction: column; flex-wrap: wrap}
+.flex-column-nowrap { display: flex; flex-direction: column; }
+.flex-vcenter { align-items: center }
+.flex-hcenter { justify-content: center }
+.flex-center { align-items: center; justify-content: center; }
+// List
+.list-inside { list-style-position: inside }
+// Whitespace
+.prewrap { white-space: pre-wrap; }
+// Line-height
+.lh-0 { line-height: 0; }
+// Overflow
+.oh { overflow: hidden; }
+// Font-size
+.f7 { font-size: .65rem; }
+.f8 { font-size: .5rem; }
+// Colors
+.red { color: $red };
+.green { color: $green };
+.dark-green { color: $dark-green };
+.purple { color: $purple };
+.blue { color: $blue };
+.yellow { color: $yellow };
+.transparent { color: $background; }
+// Backgrounds
+.bg-red { background-color: $red };
+.bg-green { background-color: $green };
+.bg-dark-green { background-color: $dark-green };
+.bg-purple { background-color: $purple };
+.bg-blue { background-color: $blue };
+.bg-yellow { background-color: $yellow };
+// Text shadow
+.no-text-shadow { text-shadow: none; }
+.text-shadow-1 { text-shadow: 2px 2px 1px black; }
+.text-shadow-2 { text-shadow: 4px 4px 3px black; }

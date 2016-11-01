@@ -1,0 +1,7 @@
+public
+Thumbs.db
+node_modules
+nohup.out
+npm-debug.log
+tmp
+*~
