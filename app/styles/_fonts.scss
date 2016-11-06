@@ -1,3 +1,14 @@
+@font-face {
+  font-family: 'Amaranth';
+  src: url('./fonts/AmaranthBold.eot?v=2.020');
+  src: url('./fonts/AmaranthBold.eot?#iefix&v=2.020') format('embedded-opentype'),
+       url('./fonts/AmaranthBold.woff2?v=2.020') format('woff2'),
+       url('./fonts/AmaranthBold.woff?v=2.020') format('woff'),
+       url('./fonts/AmaranthBold.ttf?v=2.020') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 // Hack is used to display code examples
 @font-face {
   font-family: 'Hack';

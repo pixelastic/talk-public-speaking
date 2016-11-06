@@ -1,15 +1,15 @@
 {
-  "name": "talk-marvel",
+  "name": "talk-public-speaking",
   "version": "0.0.1",
-  "description": "Making of Marvel Super-Search",
+  "description": "Prise de parole en public",
   "author": "Tim \"pixelastic\" Carry",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "ssh://git@github.com:pixelastic/talk-marvel.git"
+    "url": "ssh://git@github.com:pixelastic/talk-public-speaking.git"
   },
   "bugs": {
-    "url": "https://github.com/pixelastic/talk-marvel/issues"
+    "url": "https://github.com/pixelastic/talk-public-speaking/issues"
   },
   "scripts": {
     "build": "./scripts/build",

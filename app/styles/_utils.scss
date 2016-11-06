@@ -1,7 +1,5 @@
 // Fonts
-.palooka { font-family: 'Palooka'; }
-.palooka.small-caps { letter-spacing: .05rem;}
-.crime { font-family: 'Crime'; }
+.amaranth { font-family: 'Amaranth'; }
 .hack { font-family: 'Hack'; }
 // Flexbox
 .flex-nogrow { flex-grow: 0; }
@@ -17,6 +15,8 @@
 .flex-center { align-items: center; justify-content: center; }
 // List
 .list-inside { list-style-position: inside }
+// Text shadow
+.text-shadow { text-shadow: 2px 2px #313131; }
 // Whitespace
 .prewrap { white-space: pre-wrap; }
 // Line-height
@@ -26,22 +26,3 @@
 // Font-size
 .f7 { font-size: .65rem; }
 .f8 { font-size: .5rem; }
-// Colors
-.red { color: $red };
-.green { color: $green };
-.dark-green { color: $dark-green };
-.purple { color: $purple };
-.blue { color: $blue };
-.yellow { color: $yellow };
-.transparent { color: $background; }
-// Backgrounds
-.bg-red { background-color: $red };
-.bg-green { background-color: $green };
-.bg-dark-green { background-color: $dark-green };
-.bg-purple { background-color: $purple };
-.bg-blue { background-color: $blue };
-.bg-yellow { background-color: $yellow };
-// Text shadow
-.no-text-shadow { text-shadow: none; }
-.text-shadow-1 { text-shadow: 2px 2px 1px black; }
-.text-shadow-2 { text-shadow: 4px 4px 3px black; }

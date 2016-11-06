@@ -16,11 +16,121 @@ html(lang="en")
     <![endif]-->
   body
     .reveal
-      .slides
+      .slides.white
 
         // Intro
         include ./slides/home.pug
         include ./slides/who-am-i.pug
+
+        section
+          .h4
+            | 2014. HumanTalks
+            | Stressé
+            | 2016. Developer advocate
+            | Metrier
+
+        section
+          h1.ma0.amaranth.f1.tc.text-shadow.lh-copy
+            |Vous avez des choses à dire
+
+        section
+          img.br2.h4.db.center(src='./img/imposter.jpg', alt="Syndrome de l'imposteur")
+          .bg-black-70.br2.pa2.mt2.f6.tc
+            |Un 
+            .di.gold.b retour d'experience 
+            |ne peut pas être contredit.
+
+        section(data-background='./img/audience.jpg')
+          .bg-black-90.br2.pa2.mb2.f6.tc
+            |Les gens viennent pour le 
+            .di.b.gold contenu
+            |, pas pour 
+            .di.b.gray vous
+            |.
+
+          .dn
+            | Ce n'est pas du théatre. Vous ne faites pas une représentation.
+            | Vous n'avez pas à faire une performance. Vous etes secondaire
+            | au contenu.
+        
+        section
+          .bg-black-70.br2.pa2.mt2.f6.tc
+            |Votre stress est 
+            .di.b.gold invisible
+            |.
+
+          .flex-row-nowrap
+            .flex-none.w-50
+              .bg-black-90.br2.pa1.ma2
+                img.db.br2.w4.tc(src='./img/bio.png')
+                .tc.red.mt1 ✘ Faux
+
+            .flex-none.w-50
+              .bg-black-90.br2.pa1.ma2
+                img.db.br2.w4.tc(src='./img/teapot.jpg')
+                .tc.green.mt1 ✔ Vrai
+
+          .dn
+            | Normal d'etre stressé
+            | Mark Twain. Deux types de speakers. Ceux qui sont stressés, et
+            | ceux qui sont des menteurs.
+            | Stress reste à l'intérieur, ne se voit pas dehors.
+
+        section(data-background='img/chroma.png')
+          h3.f2.mb3.amaranth.text-shadow Filmez-vous
+
+          .h4.flex-column-nowrap.f4
+            .flex-auto.flex-center.flex.fragment
+              .dib.bg-black-90.br2.pa2 Regardez-vous
+            .flex-auto.flex.flex-center.fragment
+              .dib.bg-black-90.br2.pa2 Écoutez-vous
+
+          // .flex-row-nowrap.h4
+          //   .flex-column-nowrap.mr2
+          //     .flex-auto
+          //       .bg-black-90.pa1.br2
+          //         .di.orange Difficile 
+          //         |mais 
+          //         .di.green indispensable
+          //     .flex-auto.flex
+          //       .bg-black-90.pa1.br2.self-end
+          //         .di.orange Difficile 
+          //         |mais 
+          //         .di.green indispensable
+          //   .flex-none.flex-center.flex
+          //     img.h3.br2(src='./img/body-language.gif')
+
+          // Filmez-vous
+          // Verrez que pas stressé
+          // Dur mais nécessaire
+          // Exercice le plus important
+          // Verrez que pas stressé, mais verrez tics
+          
+          // Communication non-verbale
+          // Tics de langage, tics gestuels
+          // Gestuelle importante. Soyez naturel
+          // Si passionné, alors passionants (exemple Gary)
+
+        section
+          | Passionné = Passionant
+
+        section
+          | Synthétique
+          | Plus on connait un sujet, plus on peut synthétiser
+          | Trop de détails, prouve que maitrise pas et ne sait pas démeler
+          | l'important du superflu
+          | S'ils ne devaient en retenir qu'une chose, ca serait quoi
+          | Ecrivez les slides, puis supprimez ceux qui ne sont pas
+          | indispensables. Puis quand il n'y a plus rien à enlever, enlevez-en
+          | encore.
+
+        section
+          | Astuces de speaker
+          | Laissez des blancs
+          | Indiquez pourquoi vous etes légitimes
+          | Expliquer de quoi on va parler, indicateur de durée
+          | Donner des exemples réels, pas que de la théorie
+          | Ne pas s'excuser, ni au début, ni à la fin
 
         include ./slides/questions.pug
 
