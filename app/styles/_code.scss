@@ -1,59 +1,80 @@
+$oroshi-green: #00AF5F;
+$oroshi-dark-green: #008700;
+$oroshi-orange: $orange;
+$oroshi-red: $bittersweet;
+$oroshi-blue: #5F87AF;
+$oroshi-white: $light-gray;
+$oroshi-gray: $mid-gray;
 
-// Easy spotting of some information in code blocks
-.code--key {
-  color: $red;
-}
-.code--value {
-  color: $green;
-}
-.code--file {
-  color: $purple;
-}
-.code--directory {
-  color: $green;
-}
 
 // Oroshi colorscheme
 .token {
-  &.property {
-    color: $red;
-  }
   &.punctuation {
-    color: #D0D0D0;
-  }
-  &.function {
-    color: $dark-green;
-  }
-  &.variable {
-    color: $green;
-  }
-  &.keyword {
-     color: $red;
-  }
-  &.constant {
-     color: $yellow;
-  }
-  &.string {
-    color: $blue;
-  }
-  &.number {
-    color: $blue;
-    font-weight: bold;
+    color: $oroshi-white;
   }
   &.comment {
-    color: #626262;
+    color: $oroshi-gray;
+  }
+  &.string {
+    color: $oroshi-blue;
+  }
+  // &.property {
+  //   color: #FF5F5F;
+  // }
+  // &.function {
+  //   color: #008700;
+  // }
+  // &.variable {
+  //   color: #00AF5F;
+  // }
+  // &.keyword {
+  //    color: #FF5F5F;
+  // }
+  // &.constant {
+  //    color: #FFAF00;
+  // }
+  // &.number {
+  //   color: #5F87AF;
+  //   font-weight: bold;
+  // }
+}
+
+.language-html {
+  color: $oroshi-white;
+  .token {
+    &.tag,
+    &.punctuation {
+      color: $oroshi-dark-green;
+    }
+    &.attr-name {
+       color: $oroshi-red;
+    }
+    &.attr-value {
+      color: $oroshi-blue;
+      .punctuation ~ .punctuation {
+        color: $oroshi-blue;
+      }
+    }
   }
 }
 
-.language-html .token {
-  &.tag,
-  &.punctuation {
-    color: $dark-green;
+.language-scss {
+  // Value don't have a specific class, so we set it as the default value
+  color: $oroshi-orange; 
+  .token {
+    &.selector {
+      color: $oroshi-green;
+    }
+    &.property {
+      color: $oroshi-red;
+    }
   }
-  &.attr-name {
-     color: $red;
-  }
-  &.attr-value {
-    color: $blue;
+}
+
+.language-js {
+  .token {
+    &.function {
+      color: $oroshi-dark-green;
+    }
   }
 }

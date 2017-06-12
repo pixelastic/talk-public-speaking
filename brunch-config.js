@@ -1,27 +1,26 @@
-module.exports = {
+let config = {
   paths: {
     watched: ['app/assets', 'app/styles/', 'app/javascripts/']
   },
   files: {
     javascripts: {
       joinTo: {
-        'app.js': /^app\/javascripts\//
+        // ⇓ This line is a mystery. Without it pug throws a runtime exception
+        // in the browser, even if not explicitly loaded.
+        'vendor.js': /^(?!app)/, 
+        'app.js': /^app\/javascripts/
       }
     },
     stylesheets: {joinTo: 'main.css'}
   },
   plugins: {
-    sass: {
-      mode: 'native'
-    },
     babel: {
-      presets: ['es2015'],
-      ignore: [],
-      pattern: /\.js$/
+      presets: ['env']
     }
   },
   server: {
-    run: 'yes',
-    port: 5018
+    port: 3315
   }
-};
+}
+
+module.exports = config

@@ -1,0 +1,188 @@
+// Title
+section.slide--horizontal.slide--theme1
+  .absolute.absolute-0.bg-cover.bg-bottom-right(style="background-image: url('./img/background-data.jpg')")
+  .absolute.absolute-0.white.h-100.flcnw.flc
+    .f1.lh-title.mh6.ph6.palooka.small-caps.palooka-f1.text-shadow-1 Getting the data
+
+// Two sources
+section.slide--horizontal
+  .h-100.flcnw.pa3
+    .fln.f1.lh-title.tl.b Two sources
+    .fla.flcnw.flccv
+      .fln.flrnw
+        .fla.flc
+          img(src='./img/wikipedia.png')
+        .fla.flc
+          img(src='./img/marvel.png')
+
+// Wikipedia: Quantity
+section.slide--horizontal
+  .h-100.flcnw.ph3.pt3
+    .fln.f1.lh-title.tl.b Wikipedia: Data Quantity
+    .fla.flcnw.flccv.relative.mt3
+      .absolute.absolute-0.bg-cover.z-0(style="background-image: url('./img/wikipedia-list.png')")
+      .fln.z-1.palooka.palooka-f1.text-shadow-1.algolia-blue.small-caps 2000+ characters
+
+// Wikipedia API
+section.slide--vertical(data-transition='fade-in')
+  .h-100.flcnw.pa3
+    .fln.f1.lh-title.tl.b Wikipedia API
+    .fla.flcnw.flccv
+      .bg-near-black.pa2.lh-copy.tl.near-white.dejavu
+        .di https://en.wikipedia.org/w/api.php?
+        .di.b.green titles
+        .di =
+        .di.b.blue Captain_America
+        .di &
+        .di.b.green format
+        .di =
+        .di.b.blue json
+        .di &
+        .di.b.green action
+        .di =
+        .di.b.blue query
+        .di &
+        .di.b.green prop
+        .di =
+        .di.b.blue revisions
+        .di &
+        .di.b.green rvprop
+        .di =
+        .di.b.blue content
+
+// ~~Wikipedia API~~
+section.slide--vertical(data-transition='fade-in')
+  .h-100.flcnw.pa3
+    .fln.f1.lh-title.tl.b.strike Wikipedia API
+    .fla.flrnw.mt3.flrcv
+      .fln.w-50
+        .bg-near-black.pa2.lh-copy.tl.near-white.dejavu
+          |{{Other uses}} {{About|Steve Rogers|the subsequent versions of the character|List of incarnations of Captain America}} {{pp-vandalism|expiry=03:36, 23 May 2016|small=yes}} {{Infobox comics character  | image = CaptainAmerica109.jpg | converted = y | caption = ''Captain America'' #109 (Jan. 1969).Cover art by [[Jack Kirby]] and [[Syd Shores]]. | alt = Captain America bursting […]
+      .fln.pa3.f1.ml4
+        ul.list.tl
+          li.bullet-radical-red Raw data dump
+          li.bullet-radical-red Custom markup
+          li.bullet-radical-red Not practical
+
+// Unofficial API
+section.slide--vertical
+  .h-100.flcnw.pa3
+    .fln.f1.lh-title.tl.b.flrnw.flrcv
+      img.h3.mr3(src='./img/dbpedia.png')
+      .di DBPedia
+    .fla.flcnw
+      .fln.pv3
+        .bg-near-black.pa2.lh-copy.tl.near-white.dejavu.f2
+          .di http://dbpedia.org/data/
+          .di.b.green Thor_(Marvel_Comics)
+          .di .json
+      .fla.flrnw.flc
+        .fln.w-50
+          pre.bg-near-black.pa2.lh-copy.tl.pre-wrap.f4
+            code.language-js
+              |{
+              |  "abstract": [{
+              |    "lang": "en",
+              |    "value": "Thor is a fictional character, a superhero […]"
+              |  }],
+              |  "aliases": [{
+              |     "lang": "en",
+              |     "value": "Dr. Donald Blake, Jake Olson, Sigurd Jarlson, Eric Masterson"
+              |  }]
+              |}
+        .fln.pa3.ml4.f2
+          ul.list.tl
+            li.bullet-shamrock Structured data
+            li.bullet-shamrock Community project
+            li.bullet-radical-red Frozen in time (April 2016)
+
+// Marvel API
+section.slide--horizontal
+  .h-100.flcnw.pa3
+    .fln.f1.lh-title.tl.b Marvel API: Data Quality
+    .fla.flcnw
+      .fln.pv3
+        .bg-near-black.pa2.lh-copy.tl.near-white.dejavu.f2
+          .di http://gateway.marvel.com/v1/public/characters/
+          .di.b.green 1009351
+      .fla.flrnw.flc
+        .fln.w-50
+          img(src='./img/hulk-thumbnail.jpg')
+          pre.bg-near-black.pa2.lh-copy.tl.pre-wrap.f4
+            code.language-js
+              |{
+              | "name": "Hulk",
+              | "thumbnail": "www.marvel.com/538615ca33ab0.jpg",
+              | "description": 
+              |   "Caught in a gamma bomb explosion while trying to save the life of a teenager, [...]",
+              |}
+        .fln.pa3.ml4.f2
+          ul.list.tl
+            li.bullet-shamrock In-universe description
+            li.bullet-shamrock Cohesive thumbnails
+            li.bullet-shamrock Character popularity
+
+// Worst Practices
+section.slide--horizontal
+  .h-100.flcnw.pa3
+    .fln.f1.lh-title.tl.b Marvel API: Worst practices
+    .fla.flrw.flc.f1.tl.pa4
+      .fln.w-50.bullet-radical-red Slow
+      .fln.w-50.bullet-radical-red Rate limit
+      .fln.w-50.bullet-radical-red Timeouts
+      .fln.w-50.bullet-radical-red Infinite redirects
+      .fln.w-50.bullet-radical-red Empty results
+      .fln.w-50.bullet-radical-red.flrnw
+        .fln.flrnw.flrcv
+          .fln.bg-black-80.near-white.dejavu.f2.ph2.ml3 200 OK
+          .di.fln.ml3 errors
+
+// Scraping the website
+section.slide--horizontal
+  .h-100.flcnw.pa3
+    .fln.f1.lh-title.tl.b Marvel Website
+    .fla.flcnw.h-100
+      .fln.pv3
+        .bg-near-black.pa2.lh-copy.tl.near-white.dejavu.f2
+          .di http://marvel.com/characters/
+          .di.b.green 25
+          .di /
+          .di.b.green Hulk
+      .fla.flrnw.h-100
+        .fln.flc.w-50.h-100
+          img.h-100(src='./img/hulk.png')
+        .fla.pa3.f2.flc
+          ul.list.tl.f1
+            li.bullet-radical-red Not using the API
+            li.bullet-shamrock Custom background
+            li.bullet-shamrock Custom color
+
+// Scraping 
+section.slide--horizontal
+  .h-100.flcnw.pa3
+    .fln.f1.lh-title.tl.b Web Scraping: Poor man's API
+    .fla.flrnw
+      .fla.flcnw.flc
+        .fln
+          pre.bg-near-black.pa2.lh-copy.tl.pre-wrap.f4.mb2
+            code.language-html
+              |&lt;div class="description"&gt;
+              |  &lt;h4&gt;Hulk&lt;/h4&gt;
+              |  &lt;img src="./hulk.png" class="thumbnail"/&gt;
+              |&lt;/div&gt;
+          pre.bg-near-black.pa2.lh-copy.tl.pre-wrap.f4.mb2
+            code.language-js
+              |$('.description h4').text()
+              |$('.description img').attr('src')
+          pre.bg-near-black.pa2.lh-copy.tl.pre-wrap.f4
+            code.language-js
+              |{
+              |  "name": "Hulk",
+              |  "thumbnail": "./hulk.png"
+              |}
+      .fla.pa3.f2.flc
+        ul.list.tl.f1
+          li.bullet-shamrock Nokogiri, Scrapy, Cheerio
+          li.bullet-shamrock Always available
+          li.bullet-radical-red Breaks often
+

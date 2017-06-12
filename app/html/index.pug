@@ -1,39 +1,189 @@
-include ./partials/config.pug
-include ./partials/mixins.pug
 doctype html
 html(lang="en")
-  head
-    title=talk_title
-    meta(name="description" content=talk_description)
-    meta(name="author" content=talk_author)
-    meta(name="apple-mobile-web-app-capable" content="yes")
-    meta(name="apple-mobile-web-app-status-bar-style" content="black-translucent")
-    meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
-    link(rel='stylesheet', type='text/css', href='./main.css')
-    link(rel='shortcut icon', href='./favicon.ico')
-    <!--[if lt IE 9]>
-      script(src='./js/html5shiv.js')
-    <![endif]-->
+  include ./partials/header
   body
     .reveal
-      .slides.white
+      .slides.bg-white.lh-copy.bunting.f3.fw3
 
-        include ./slides/home.pug
-        include ./slides/who-am-i.pug
-        include ./slides/developer-advocate.pug
-        include ./slides/things-to-say.pug
-        include ./slides/imposter-syndrome.pug
-        include ./slides/content.pug
-        include ./slides/no-stress.pug
-        include ./slides/record-yourself.pug
-        // include ./slides/body-language.pug
-        // include ./slides/simplify.pug
-        include ./slides/no-excuses.pug
+        include ./slides/intro
+        section.slide--horizontal 
+          | Two columns. Me in the HT first talk, me as developer advocate now, in 2 years
+        section.slide--horizontal 
+          | Algolia Speaker Program title
+          | Pictures of Algolians on stage?
+          | Helping people share what they're expert and pasisonate about.
+          | Support them and help them in the rest so they can focus on what they do best
+        section 
+          | List of questions
+          | Most common blockers:
+          | I have nothing to say
+          | I'm afraid of going on stage
+          | I don't know any meetup or conference
+          | I don't know how to prepare slides
 
-        include ./slides/questions.pug
+        // WHY SHOULD I SPEAK?
+        section
+          | Why?
+          | "I'm a developer. I don't talk to people"
+        section 
+          | list of 3 points
+          | Share what you know
+          | Great for career advancement, you're an expert
+          | Makes you go deeper. Next step of learning is teaching
+        section
+          | Define the various 6 steps. 6 spots, appearing one by one. With picture of knows speakers/events
+          | - I talk about what I do around coffee
+          | - I do internal presentations at the end of projects
+          | - I present stuff in meetups
+          | - I talk in paid conferences
+          | - I fly abroad to talk in several conferences
+          | - I'm invited to talk at events
+          | Where are you. Where would you like to go?
 
-  script(src='./js/head.min.js')
-  script(src='./js/reveal.js')
-  script(src='./app.js')
-  script require('javascripts/app').default.init()
+        // WHAT CAN I TALK ABOUT?
+        section
+          | "You have things to say". Full page
+          | Most important advice ever
+        section 
+          | Imposter syndrom image
+          | Imposter Syndrome. What you know, what they know.
+          | Kill the little voice in your head telling you not to do it
+          | What would you have love to hear when you started this job?
+        section
+          | Gartner curve, explaining what to talk about in each part
+        section
+          | You can't be wrong when sharing experiences
+        section 
+          | How we do it in the speaker program:
+          | 4 step list
+          | 1/ Write ideas on paper. Lots of them. Just dump. Don't apply judgment on it.
+          | 2/ Suggest ideas to other people (group of 4-5 works well). listen to feedback, what do they like
+          | 3/ Sort ideas in your favorite order (not audience order)
+          | 4/ Start working on the idea on top
+        
+        // WHERE SHOULD I TALK?
+        section
+          | Internal. 
+          | People you already know. Subject you're all familiar with.
+          | - Retro of last project
+          | - Post Mortem of last issue
+          | - New language/tool you've tried as a side project
+          | - What the hell, talk about something else you're passionate about that has nothing to do with work
+        section
+          | Meetups
+          | Paris. Many meetups (screenshot of techs meetups on meetup.com?)
+          | Meetup accept talks easily. Can even play it in several meetups (js, react, pwa, etc)
+        section
+          | Conferences. A bit more involvment.
+          | CFP
+          | - Title: Think multi tracks. Catchy. People will choose based on that in the heat of action
+          | - Abstract: Tell more about the content. Social contract, don't break it.
+          | - Private info: Talk to the organizes. Explain the content, your goals, why this talk is interesting, etc.
+          | - Slides/Video: Will help the organize pick you. Would rather take more experencent speakers
+        section
+          | How we do it:
+          | Make it collaborative. Google Doc where speaker adds their ideas. 3-4 different titles. Iterative improving of abstract,
+          | proof-reading, etc. Shared and can be re-used.
 
+        // WHEN. ABOUT TIMING
+        section
+          | How long should my talk be?
+          | TEDTalks, scientifically proven 18mn attention span. Find that pretty accurate.
+          | 25mn still ok. 30mn max. 10mn interesting. Short and concise.
+          | If more. Make a "break" in the middle. Tell a story, let their mind rest
+        section
+          | Should I go first? Last?
+          | - First, need to wake them up.
+          | - Last, might be tired of the day
+          | - Right before lunch, they will be hungry
+          | - Right after lunch, they will be sleepy
+          | No better time for the audience. Find what is best for you. I prefer going first, so I have time to discuss with people.
+
+        // HOW CAN I PREPARE MY SLIDES
+        section
+          | Lived with a writer. When had to prepare a story, here is how he did it:
+          | - write everything that seems interesting. Idea, code example, great sentence, great picture.
+          | - sort them by "room". Here it's the bathroom, the bedroom, etc
+          | - order rooms between eahc other, to have a logical path
+          | - sort each room, ordering what is great and not so great
+          | Turns out my roomate later wrote "Bref", so sound advice
+        section
+          | Tooling is important. Use the best tool for you.
+          | Keynote if on mac, PowerPoint windows, Google Slides.
+          | List of logos of each
+          | Personal story: Hated PowerPoint, moved to Reveal.js
+        section
+          | Tips for slides
+          | - Introduce yourself. Why are you the best to talk about that. Say your name aloud.
+          | - Make your slides understandable without sound
+          | - Make them tweetable (@handle + simple message)
+          | - Avoid gimmicks
+          | - Add a time indicator
+        section
+          | Takes time.
+          | - 1mn of talk = 1 hour of prep = 1.5 slides
+          | Included finding idea, writing it down, creating slides, re-reading, rehearsal
+          | We do rehearsal (at least 2) before talk
+
+        // I'M AFRAID OF BEING ON STAGE
+        section
+          | I'm scared to go on stage.
+          | That's normal. Not natural to be watched by many people at once.
+          | Danger situation. Adrenaline rush. Need to use it correctly.
+        section
+          | Stress is inside of you. Bifidus actif is wrong. Does not show outside.
+          | HTTP 418: I'm a teapot. Can be storm inside, can't be seen outside
+        section
+          | Easy to say...
+          | Well. Record and watch. Hard, but most important part
+        section
+          | Enjoy the moment. Enjoy the adrenaline, it's like skydiving
+          | A few ways to lower your stress, so you can enjoy it more
+          | - People are coming for your content, not you
+          | - It's not theatre. You're not here to be loved. You're here to have a message.
+          | - Rehearsal will help you feel better. Go to the room before
+          | - Prepare intro and conclusion
+
+        // HAVING AN IMPACT
+        section
+          | Non-verbal
+          | - Add silences
+          | - Stay firm on your feet
+          | - Don't touch your hands. Speak with them.
+          | - No "I hope", "I'm sorry"
+        section
+          | Tell a story. Tips from being a game master.
+          | - Maybe tell a story (monomyth. Start, opposition, refusal, new world, challenges, treasure, back to initial boss)
+          | - Repeat things 3 times. What should they remember? Say it three times
+        section
+          | At Aloglia. Public speaking classes (2 days) with teacher for every employee
+          | People loves it. Helps in everyday talk.
+          | If start doing talks 1 month after, keep doing them because they enjoy it
+
+
+        // AFTER THE SHOW
+        section
+          | Post slides on Twitter/Meetup.com
+          | Share the video (and watch it!)
+          | Play it several times, capitalize on the time invested
+      
+        // QUESTIONS
+        section 
+          | How to handle question.
+          | After the show, not during.
+        section
+          | Duo presenting?
+          | Perceval and Karadoc. Only good if opposition.
+
+
+        // include ./slides/getting-data
+        // include ./slides/tips
+        // include ./slides/ui
+
+        include ./slides/conclusion
+
+
+        include ./partials/aside-horizontal
+        include ./partials/aside-vertical
+
+    include ./partials/footer
