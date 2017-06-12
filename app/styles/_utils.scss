@@ -34,8 +34,20 @@
 .left--5   { left:   -16rem; }
 
 .absolute-center-horizontal { 
+  position: absolute;
   left: 50%; 
   transform: translateX(-50%);
+}
+.absolute-center-vertical { 
+  position: absolute;
+  top: 50%; 
+  transform: translateY(-50%);
+}
+.absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
 }
 // }}}
 // BACKGROUND {{{
@@ -93,6 +105,15 @@
 
 .bunting { color: $bunting; }
 .bg-bunting { background-color: $bunting; }
+.bg-bunting-10 { background-color: rgba($bunting, .1); }
+.bg-bunting-20 { background-color: rgba($bunting, .2); }
+.bg-bunting-30 { background-color: rgba($bunting, .3); }
+.bg-bunting-40 { background-color: rgba($bunting, .4); }
+.bg-bunting-50 { background-color: rgba($bunting, .5); }
+.bg-bunting-60 { background-color: rgba($bunting, .6); }
+.bg-bunting-70 { background-color: rgba($bunting, .7); }
+.bg-bunting-80 { background-color: rgba($bunting, .8); }
+.bg-bunting-90 { background-color: rgba($bunting, .9); }
 .bullet-bunting:before { content: "> "; color: $bunting; }
 
 .deep-cove { color: $deep-cove; }
@@ -176,6 +197,9 @@
 .bg-gradient-cherry-20 { background-image: linear-gradient(to top right, rgba(#E7486B, .2), rgba(#9C4274, .2)); }
 .bg-gradient-cherry-10 { Background-image: linear-gradient(to top right, rgba(#E7486B, .1), rgba(#9C4274, .1)); }
 // }}}
+// GRAYSCALE {{{
+.grayscale { filter: grayscale(100%); }
+// }}}
 // HEIGHT {{{
 .h6 { height: 32rem; }
 .h-10 { height: 10%; }
@@ -253,25 +277,4 @@
 // }}}
 // WHITE-SPACE {{{
 .pre-wrap { white-space: pre-wrap; }
-// }}}
-// Fake browser window {{{
-.fake-browser {
-  padding: 46px 1px 1px 1px;
-  background: #F7F7FF;
-  border-radius: 8px;
-  position: relative;
-  overflow: hidden;
-  &:before {
-    content: "";
-    position: absolute;
-    top: 16px;
-    left: 16px;
-    background: rgba(0, 0, 0, 0.12);
-    display: block;
-    border-radius: 50%;
-    width: 14px;
-    height: 14px;
-    box-shadow: 30px 0 0 rgba(0, 0, 0, 0.12), 62px 0 0 rgba(0, 0, 0, 0.12);
-  }
-}
 // }}}

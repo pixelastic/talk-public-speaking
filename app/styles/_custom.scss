@@ -1,0 +1,103 @@
+// Fake browser window {{{
+.fake-browser {
+  padding: 46px 1px 1px 1px;
+  background: #F7F7FF;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background: rgba(0, 0, 0, 0.12);
+    display: block;
+    border-radius: 50%;
+    width: 14px;
+    height: 14px;
+    box-shadow: 30px 0 0 rgba(0, 0, 0, 0.12), 62px 0 0 rgba(0, 0, 0, 0.12);
+  }
+}
+// }}}
+// Polaroids {{{
+.polaroids {
+  position: relative;
+  .polaroid-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    &:nth-child(odd) {
+      left: 65%;
+    }
+    &:nth-child(even) {
+      left: 35%;
+    }
+    &:nth-child(2n+1) {
+      top: 40%;
+    }
+    &:nth-child(3n) {
+      top: 65%;
+    }
+    &:nth-child(3n+1) {
+      margin-left: 4rem;
+    }
+    &:nth-child(3n+2) {
+      margin-left: -4rem;
+    }
+    &:nth-child(4n) {
+      margin-left: -8rem;
+    }
+    &:nth-child(4n+1) {
+      margin-left: -15rem;
+    }
+    &:nth-child(4n+4) {
+      margin-top: -4rem;
+    }
+
+    &:nth-child(2n) .polaroid-inner {
+      transform: rotate(4deg);
+    }
+    &:nth-child(2n+1) .polaroid-inner {
+      transform: rotate(-6deg);
+    }
+    &:nth-child(2n+3) .polaroid-inner {
+      transform: rotate(7deg);
+    }
+    &:nth-child(2n+4) .polaroid-inner {
+      transform: rotate(-1deg);
+    }
+  }
+
+
+  .polaroid-inner {
+    &:after {
+      content: attr(title);
+      display: block;
+      @extend .f4;
+    }
+  }
+
+
+
+
+  // $base_transform: translateX(-50%) translateY(-50%);
+  // .polaroid-layer1 {
+  //
+  //   &:nth-child(odd) {
+  //     background: red;
+  //   }
+  //   &:nth-child(even) {
+  //     transform: rotate(6deg) translateX(-25%) translateY(-70%);
+  //     background: blue;
+  //   }
+  //   &:nth-child(3n) {
+  //     transform: translateX(-50%) translateY(-50%) rotate(-7deg);
+  //     background: green;
+  //   }
+  //   // &:nth-child(odd) {
+  //   //   transform: rotate(-7deg);
+  //   // }
+  // }
+}
+// }}}

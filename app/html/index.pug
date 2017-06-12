@@ -1,3 +1,4 @@
+include ./mixins/polaroid
 doctype html
 html(lang="en")
   include ./partials/header
@@ -6,39 +7,7 @@ html(lang="en")
       .slides.bg-white.lh-copy.bunting.f3.fw3
 
         include ./slides/intro
-        section.slide--horizontal 
-          | Two columns. Me in the HT first talk, me as developer advocate now, in 2 years
-        section.slide--horizontal 
-          | Algolia Speaker Program title
-          | Pictures of Algolians on stage?
-          | Helping people share what they're expert and pasisonate about.
-          | Support them and help them in the rest so they can focus on what they do best
-        section 
-          | List of questions
-          | Most common blockers:
-          | I have nothing to say
-          | I'm afraid of going on stage
-          | I don't know any meetup or conference
-          | I don't know how to prepare slides
-
-        // WHY SHOULD I SPEAK?
-        section
-          | Why?
-          | "I'm a developer. I don't talk to people"
-        section 
-          | list of 3 points
-          | Share what you know
-          | Great for career advancement, you're an expert
-          | Makes you go deeper. Next step of learning is teaching
-        section
-          | Define the various 6 steps. 6 spots, appearing one by one. With picture of knows speakers/events
-          | - I talk about what I do around coffee
-          | - I do internal presentations at the end of projects
-          | - I present stuff in meetups
-          | - I talk in paid conferences
-          | - I fly abroad to talk in several conferences
-          | - I'm invited to talk at events
-          | Where are you. Where would you like to go?
+        include ./slides/why
 
         // WHAT CAN I TALK ABOUT?
         section
