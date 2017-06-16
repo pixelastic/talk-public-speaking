@@ -6,3 +6,13 @@
 .reveal .progress span {
   background-color: $bunting;
 }
+
+
+.reveal .slides section .fragment.fragment-reverse {
+  opacity: inherit;
+  visibility: initial;
+  &.visible {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
