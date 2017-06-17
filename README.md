@@ -1,6 +1,6 @@
-# Prise de parole en public
+# Algolia Speaker Program
 
-Dans cette présentation, je donne des trucs et astuces pour démystifier le
-principe même de donner une présentation et donner envie aux gens de venir
-partager ce qu'ils savent.
+Explaining what is the Algolia Speaker Program. How do we help Algolians find
+a topic, find a conference, rehearse, create slides and fight stage fright.
+
 
