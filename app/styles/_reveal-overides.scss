@@ -1,11 +1,21 @@
+// Prevent slides from sliding "outside" of their container...
+.reveal .slides {
+  overflow: hidden;
+}
+//... while still allowing the "overview" vision (By pressing Escape)
+.reveal.overview .slides {
+  overflow: visible;
+}
+
 .reveal .slides > section {
   padding: 0;
   width: auto;
 }
 
-.reveal .progress span {
-  background-color: $bunting;
-}
+.reveal .progress { height: 1%; }
+.reveal .progress span { background-color: $titan-white; }
+.reveal .layout--theme1 ~ .progress span { background-color: $algolia-blue; }
+.reveal .layout--vertical ~ .progress span { background-color: $algolia-blue; }
 
 
 .reveal .slides section .fragment.fragment-reverse {

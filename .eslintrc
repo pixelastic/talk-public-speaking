@@ -2,7 +2,8 @@
   "globals": {
     "Reveal": true,
     "Prism": true,
-    "$": true
+    "$": true,
+    "_": true
   },
   "extends": "algolia",
   "rules": {
