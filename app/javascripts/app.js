@@ -20,6 +20,8 @@ let Talk = {
           return !document.body.classList;
         }
       }, {
+        src: 'js/vendors/notes.js'
+      },{
         src: 'js/vendors/prism.js',
         callback: () => {
           Prism.highlightAll();
