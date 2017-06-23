@@ -1,26 +1,26 @@
-let config = {
+const config = {
   paths: {
-    watched: ['app/assets', 'app/styles/', 'app/javascripts/']
+    watched: ['app/assets', 'app/styles/', 'app/javascripts/'],
   },
   files: {
     javascripts: {
       joinTo: {
         // ⇓ This line is a mystery. Without it pug throws a runtime exception
         // in the browser, even if not explicitly loaded.
-        'vendor.js': /^(?!app)/, 
-        'app.js': /^app\/javascripts/
-      }
+        'vendor.js': /^(?!app)/,
+        'app.js': /^app\/javascripts/,
+      },
     },
-    stylesheets: {joinTo: 'main.css'}
+    stylesheets: { joinTo: 'main.css' },
   },
   plugins: {
     babel: {
-      presets: ['env']
-    }
+      presets: ['env'],
+    },
   },
   server: {
-    port: 3315
-  }
-}
+    port: 3315,
+  },
+};
 
-module.exports = config
+module.exports = config;

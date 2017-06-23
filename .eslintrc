@@ -1,9 +1,0 @@
-{
-  "globals": {
-    "Reveal": true,
-    "Prism": true,
-    "$": true,
-    "_": true
-  },
-  "extends": "algolia"
-}

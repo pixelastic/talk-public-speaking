@@ -1,11 +1,11 @@
-let Talk = {
+const Talk = {
   $slides: null,
   init() {
     Reveal.initialize({
       width: 1368,
       height: 768,
       margin: 0,
-      minScale: .8,
+      minScale: 0.8,
       maxScale: 2,
 
       controls: false,
@@ -17,9 +17,7 @@ let Talk = {
       dependencies: [
         {
           src: 'js/vendors/classList.js',
-          condition: () => {
-            return !document.body.classList;
-          },
+          condition: () => !document.body.classList,
         },
         {
           src: 'js/vendors/notes.js',
@@ -61,16 +59,16 @@ let Talk = {
   setGlobalStateClasses() {
     const currentSlide = document.querySelector('section.present');
     const currentStateClasses = Talk.$slides.attr('class').split(' ');
-    const currentSlideClasses = _.filter(currentSlide.classList, className => {
-      return _.startsWith(className, 'slide--');
-    });
+    const currentSlideClasses = _.filter(currentSlide.classList, className =>
+      _.startsWith(className, 'slide--')
+    );
     const newStateClasses = _.concat(
-      _.reject(currentStateClasses, className => {
-        return _.startsWith(className, 'layout--');
-      }),
-      _.map(currentSlideClasses, className => {
-        return className.replace('slide--', 'layout--');
-      })
+      _.reject(currentStateClasses, className =>
+        _.startsWith(className, 'layout--')
+      ),
+      _.map(currentSlideClasses, className =>
+        className.replace('slide--', 'layout--')
+      )
     );
     Talk.$slides.attr('class', newStateClasses.join(' '));
   },

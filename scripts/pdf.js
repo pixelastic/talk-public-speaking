@@ -1,82 +1,74 @@
-// Launch Headless Chrome
-// Find port of brunch config
-// Open url on first slide
-// Get max number of slides
-// Take a screenshot
-// go to next url
-// take a screenshot
-// until last slide
-// merge slides into a pdf
+const chromeLauncher = require('lighthouse/chrome-launcher/chrome-launcher');
 const CDP = require('chrome-remote-interface');
+const brunchConfig = require('../brunch-config.js');
+const fs = require('fs');
 
-// # #!/usr/bin/env ruby
-// # require 'fileutils'
-// #
-// # # Create a pdf export of the talk
-// # class Pdf
-// #   def initialize
-// #     @screenshots = File.expand_path('./screenshots')
-// #     @brunch_config = File.expand_path('./brunch-config.js')
-// #   end
-// #
-// #   def create_directories
-// #     FileUtils.mkdir_p(@screenshots)
-// #   end
-// #
-// #   # Return the port used in the brunch config
-// #   def get_port
-// #     raw_config = File.read(@brunch_config)
-// #     raw_config.each_line.detect do |line|
-// #       line = line.strip
-// #       break line.split(': ')[1] if line =~ /^port/
-// #       false
-// #     end
-// #   end
-// #
-// #   def get_width
-// #
-// #   end
-// #
-// #   def get_height
-// #     
-// #   end
-// #
-// #   def take_screenshot(slide_number)
-// #     Dir.chdir(@screenshots)
-// #
-// #     url = "http://localhost:#{get_port}/#/#{slide_number}"
-// #     output = "slide_#{slide_number.to_s.rjust(2, "0")}.png"
-// #
-// #     options = [
-// #       '--headless',
-// #       '--disable-gpu',
-// #       '--screenshot',
-// #       url
-// #     ]
-// #     command = "google-chrome #{options.join(' ')}"
-// #     `#{command}`
-// #
-// #     FileUtils.mv('./screenshot.png', "./#{output}")
-// #   end
-// #
-// #   def run
-// #     p get_port
-// #
-// #     # create_directories
-// #     #
-// #     take_screenshot(10)
-// #   end
-// #
-// #
-// # end
-// # Pdf.new.run
-// #
-// # # mkdir -p ./tmp
-// # # mkdir -p ./screenshots
-// # # cd ./tmp
-// # #
-// # # # Generate screenshots of every page
-// # #
-// # # cd 
-// # #
-// # #
+// // Launch Headless Chrome
+// // Find port of brunch config
+// // Open url on first slide
+// // Get max number of slides
+// // Take a screenshot
+// // go to next url
+// // take a screenshot
+// // until last slide
+// // merge slides into a pdf
+const ExportToPdf = {
+  getPort() {
+    return brunchConfig.server.port;
+  },
+  async launchHeadlessChrome() {
+    const chrome = await chromeLauncher.launch({
+      chromeFlags: ['--headless', '--disable-gpu', '--window-size=1368,768'],
+    });
+    const client = await CDP({port: chrome.port});
+    return client;
+  },
+  async run() {
+    const cdp = await this.launchHeadlessChrome();
+    const {Page} = cdp;
+    const url = `http://localhost:${this.getPort()}/`;
+    // TODO: Wait for the whole instanciation in one bit await function
+    // TODO: Find the number of slides
+    // TODO: Create a method to take a screenshot of a specific page
+    // TODO: Loop through all pages
+    // TODO: Convert all images to pdf
+    console.info(url);
+    try {
+      await Page.enable();
+      await Page.navigate({url});
+      await Page.loadEventFired();
+      const screen = await Page.captureScreenshot();
+      fs.writeFileSync('./scrot.png', Buffer.from(screen.data, 'base64'));
+    } catch (err) {
+      console.info(err);
+    } finally {
+      console.info('over');
+      // TODO: Find a way to close, terminate the script
+      await cdp.close();
+    }
+
+    // try {
+    //
+    // } catch (err) {
+    //   console.info(err);
+    // } finally {
+    //   if (client) {
+    //     await client.close();
+    //   }
+    // }
+
+    // this.launchHeadlessChrome().then(async chrome => {
+    //   const version = await CDP.Version({port: chrome.port});
+    //   console.log(version['User-Agent']);
+    // });
+    // Open slides
+    // Get max number of slides
+    // Take screenshots of them all
+    // Make a PDF out of it
+
+    // console.info(this.getPort());
+  },
+};
+
+ExportToPdf.run();
+
