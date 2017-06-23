@@ -1,0 +1,10 @@
+$print-height: 768px;
+$print-width: 1368px;
+@media print {
+  @page {
+    size: $print-width $print-height;
+    margin: 0;
+  }
+
+}
+
