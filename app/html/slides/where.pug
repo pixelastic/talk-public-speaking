@@ -1,101 +1,106 @@
-// WHERE?
-section.slide--horizontal.slide--theme1
-  .bg-gradient-primary.white.h-100.flcnw.flc
-    .f-subheadline.lh-title.mh4.ph6 Where can I do a talk?
-    .i.mt2.f2 "I don't go to meetups, I know no one"
-
-// A SUCCESSFUL TALK IS...
-section.slide--vertical
-  .h-100.flcnw.pa3
-    .fln.f1.lh-title.tl.b A successful talk is...
-    .fla.flc
-      ul.list.tl.f-subheadline
-        li.bullet-shamrock ⅓ content
-        li.bullet-shamrock ⅓ speaker
-        li.bullet-shamrock ⅓ audience
-    aside.notes
-      | You can have the most interesting content and be an amazing speaker, if people don' care
-      | it's wasted. Adapt your content to your audience.
-
 // How to apply where
 section.slide--vertical
   .h-100.flcnw.pa3
-    .fln.f1.lh-title.tl.b How to apply?
+    .fln.f1.lh-title.tl.b Two types of events
     .fla.flrnw.flrspa.pv5
-      .fla.flcnw.ma2.w-third.bg-black-10.br2.oh
-        .fln.relative.bg-black.br2.h4.flc
-          .absolute.absolute-0.bg-cover.bg-center.grayscale.z-0.o-30(style="background-image:url('./img/algolia-office.jpg')")
-          .b.z-1.logan.f1 Internal
-        .fla.flcnw.flccv.pa3.f2
-          ul.list.tl
-            li Book a room
-            li Tell your team
-
-      .fla.flcnw.ma2.w-third.bg-black-10.br2.fragment
-        .fln.relative.bg-black.br2.h4.flc
+      .fla.flcnw.ma2.w-50.bg-black-10.br2
+        .fln.relative.bg-black.br2.h-100.flc
           .absolute.absolute-0.bg-cover.bg-center.grayscale.z-0.o-30(style="background-image:url('./img/searchparty_sf.jpg')")
-          .b.z-1.bittersweet.f1 Meetups
-        .fla.flcnw.flccv.pa3
-          ul.list.tl
-            li Browse meetup.com
-            li Easy to get accepted
-            li Wait 1-2 months
+          .b.z-1.bittersweet.f-subheadline Meetups
 
-      .fla.flcnw.ma2.w-third.bg-black-10.br2.fragment
-        .fln.relative.bg-black.br2.h4.flc
+      .fla.flcnw.ma2.w-50.bg-black-10.br2
+        .fln.relative.bg-black.br2.h-100.flc
           .absolute.absolute-0.bg-cover.bg-center.grayscale.z-0.o-30(style="background-image:url('./img/onstage_guillaume.jpg')")
-          .b.z-1.shamrock.f1 Conferences
-        .fla.flcnw.flccv.pa3
-          ul.list.tl
-            li Submit Call For Paper
-            li Track record
-            li Competition
-            li Wait ~6 months
+          .b.z-1.shamrock.f-subheadline Conferences
 
-
-// HOW TO FILL A CFP 1/2
-section.slide--vertical(data-transition='fade-in')
+// Getting accepted in a meetup in four steps
+section.slide--vertical
   .h-100.flcnw.pa3
-    .fln.f1.lh-title.tl.b How to fill a CFP
-    .fla.flrnw
-      .fln.flcnw.w-third.f1
-        .fla.flc.b.green Public
-        .fla.flc.b.logan.o-50 Private
-      .fla.flcnw.pa4.tl.flcspa.ml4
-        .fln
-          .db.b Where
-          .db.ml3 Displayed on website.
-          .db.ml3 Printed on program. 
-        .fln
-          .db.b Goals
-          .db.ml3 Help audience decide.
-          .db.ml3 Competition against the other room.
-        .fln
-          .db.b How
-          .db.ml3 Be explicit.
-          .db.ml3 Social contract. 
-            .di.b Don't break it.
+    .fln.f1.lh-title.tl.b Getting accepted to a meetup in four steps
+    .fla.flcnw.tl.flcspa.ml5.f3.mt4
+      .fln.mv2
+        .db.b.bullet-shamrock.f2 Pick a meetup
+        .db.ml4 meetup.com, eventbrite, etc
+      .fln.mv2
+        .db.b.bullet-shamrock.f2 Send an email to the organizers
+        .db.ml4 Explaining what you'd like to talk about
+      .fln.mv2
+        .db.b.bullet-shamrock.f2 Wait 1-2 months
+        .db.ml4 Be patient
+      .fln.mv2
+        .db.b.bullet-shamrock.f2 Done
+        .db.ml4 Yes, it's that easy
 
-// HOW TO FILL A CFP 2/2
-section.slide--vertical(data-transition='fade-in')
+// Why is a conference any different?
+section.slide--vertical
   .h-100.flcnw.pa3
-    .fln.f1.lh-title.tl.b How to fill a CFP
+    .fln.f1.lh-title.tl.b Why is a conference any different?
+    .fla.flcnw.tl.flcspa.ml5.f3.mt4.mb5
+      .fln.mv2
+        .db.b.bullet-shamrock.f2 People paid for it
+        .db.ml4 They expect higher talk quality
+      .fln.mv2
+        .db.b.bullet-shamrock.f2 The line-up should be attractive
+        .db.ml4 So more people are coming and the event is profitable
+      .fln.mv2
+        .db.b.bullet-shamrock.f2 Speakers have to go through the Call For Paper
+        .db.ml4 ...and convince the organizers
+
+// CFP Public
+section.slide--vertical
+  .h-100.flcnw.pa3
+    .fln.f1.lh-title.tl.b Public fields: Title & Abstract
+    .fla.flcnw.flcspa
+      .fln.flcnw.flcspa.pt4
+        .fln.f1.bullet-shamrock Goal: Convince the 
+          .di.b audience
+      .fla.flcnw.tl.f2.flcspa
+        .fln.fragment
+          .b Title
+          .db.ml4
+            .db Make it catchy.
+            .db Competition against 
+              .di.i the other room.
+            .db People will choose in a heartbeat.
+        .fln.fragment
+          .b Abstract
+          .db.ml4
+            .db Tell more about the content.
+            .db Be upfront, don't hide information.
+            .db Don't break the social contract.
+
+// CFP Private
+section.slide--vertical
+  .h-100.flcnw.pa3
+    .fln.f1.lh-title.tl.b Private fields: Comments & Links
+    .fla.flcnw.flcspa
+      .fln.flcnw.flcspa.pt4
+        .fln.f1.bullet-mulberry Goal: Convince the 
+          .di.b organizers
+      .fla.flcnw.tl.f2.flcspa
+        .fln.fragment
+          .b Comments
+          .db.ml4
+            .db Talk to the organizers. They are human.
+            .db Explain why you do this talk, what the message is.
+            .db Don't underestimate this field.
+        .fln.fragment
+          .b Links
+          .db.ml4
+            .db Show your track record.
+            .db Videos, slides, articles.
+            .db Create a screencast if needed.
+
+// Collaborative help
+section.slide--horizontal
+  .h-100.flcnw.pa3
+    .fln.f1.lh-title.tl.b Getting better together
     .fla.flrnw
-      .fln.flcnw.w-third.f1
-        .fla.flc.b.logan.o-50 Public
-        .fla.flc.b.green Private
-      .fla.flcnw.pa4.tl.flcspa.ml4
-        .fln
-          .db.b Where
-          .db.ml3 Only between you and organizers.
-        .fln
-          .db.b Goals
-          .db.ml3 Help the organizers decide.
-          .db.ml3 Will it bring them more audience?
-        .fln
-          .db.b How
-          .db.ml3 Talk to them. 
-          .db.ml3 Let them know who you are.
-          .db.ml3 Links to slides, videos, articles.
-    aside.notes
-      | Pro-tip: Use GDocs for iterative collaboration, can be reused.
+      .fln.flc.w-50
+        img.w-100(src="./img/gdoc.png")
+      .fln.flcnw.w-50.flccv
+        .fln.tl.ml5.f1
+          .bullet-shamrock Google Document
+          .bullet-shamrock Iterative feedback
+          .algolia-blue.f-headline.pa3.tc #help-cfp
+
