@@ -19,7 +19,7 @@ const config = {
     },
   },
   server: {
-    port: 3315,
+    port: 3318,
   },
 };
 
